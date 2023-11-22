@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet-async';
 const Order = () => {
     const categories = ['salads', 'pizza', 'soups', 'desserts', 'drinks'];
     const {category} = useParams();
-    console.log(category);
+    // console.log(category);
     let initialIndex;
     category ?  initialIndex = categories.indexOf(category) :  initialIndex = 0;
     const [tabIndex, setTabIndex] = useState(initialIndex);
