@@ -1,5 +1,5 @@
 
-import { FaAd, FaBook, FaBookmark, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
+import { FaAd, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
@@ -19,7 +19,7 @@ const Dashboard = () => {
                     {
                         isAdmin ?
                             <>
-                            {/* show if user is an admin */}
+                                {/* show if user is an admin */}
                                 <li>
                                     <NavLink to='/dashboard/adminHome'>
                                         <FaHome></FaHome>
@@ -53,7 +53,7 @@ const Dashboard = () => {
                             </>
                             :
                             <>
-                            {/* show if user is a general user */}
+                                {/* show if user is a general user */}
                                 <li>
                                     <NavLink to='/dashboard/userHome'>
                                         <FaHome></FaHome>
@@ -61,9 +61,9 @@ const Dashboard = () => {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/reservation'>
+                                    <NavLink to='/dashboard/history'>
                                         <FaCalendar></FaCalendar>
-                                        Reservation
+                                        Not History
                                     </NavLink>
                                 </li>
                                 <li>
@@ -79,9 +79,9 @@ const Dashboard = () => {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/bookings'>
-                                        <FaBookmark></FaBookmark>
-                                        My Bookings
+                                    <NavLink to='/dashboard/paymentHistory'>
+                                        <FaList></FaList>
+                                        Real Payment History
                                     </NavLink>
                                 </li>
                             </>
