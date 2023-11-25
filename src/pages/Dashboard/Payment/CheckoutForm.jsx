@@ -18,7 +18,7 @@ const CheckoutForm = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
 
-    const totalPrice = cart.reduce((total, food) => total + food.price, 0).toFixed(2);
+    const totalPrice = parseFloat(cart.reduce((total, food) => total + food.price, 0).toFixed(2));
 
     useEffect(() => {
         if (totalPrice > 0) {
